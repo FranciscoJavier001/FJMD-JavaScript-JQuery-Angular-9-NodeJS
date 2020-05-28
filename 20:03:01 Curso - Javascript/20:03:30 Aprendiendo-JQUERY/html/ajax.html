@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aprendiendo jQuery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src=""></script>
+
+    <style>
+        #datos {
+            border: 2px solid green;
+            width: 250px;
+            height: 250px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Aprendiendo jQuery - AJAX</h1>
+
+    <form action="https://reqres.in/api/users" method="POST" id="formulario">
+        Nombre<input type="text" name="name"> Web
+        <input type="text" name="web">
+        <input type="submit" value="Registrar">
+    </form>
+    <br>
+
+    <div id="datos"></div>
+
+    <script src="./../js/05-ajax.js"></script>
+</body>
+
+</html>

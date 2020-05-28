@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title>
+</head>
+
+<body>
+    <h1>Titulo de mi Web</h1>
+    <h2>Bienvenidos a mi Web</h2>
+    <p>
+        Hola que tal desde este curso
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste officia mollitia iusto neque voluptatum tempore dignissimos porro dolorem, excepturi aperiam minima in ipsum dolore incidunt libero minus. Repellat, laudantium.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste officia mollitia iusto neque voluptatum tempore dignissimos porro dolorem, excepturi aperiam minima in ipsum dolore incidunt libero minus. Repellat, <br>laudantium.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste officia mollitia iusto neque voluptatum tempore dignissimos porro dolorem, excepturi aperiam minima in ipsum dolore incidunt libero minus. Repellat, laudantium.
+    </p>
+    <hr>
+    <h2>Imagenes en HTML</h2>
+    <img src="./img/img1.jpg" alt="img1" width="550px">
+    <hr>
+    <h3>Tercer encabezado de la pagina</h3>
+    <p>
+        Lorem ipsum <strong>dolor sit amet consectetur <span id="resaltado" class="rojo amarillo">adipisicing elit. Voluptate iste officia mollitia </span>iusto neque voluptatum tempore dignissimos </strong>porro dolorem, excepturi <em>minima in<br> <blockquote>ipsum dolore incidunt libero minus. </em><i>Repellat,
+        laudantium.</i></blockquote>
+    </p>
+
+    <h3>Formulario</h3>
+    <form>
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+        </p>
+        <p>
+            <label for="descripcion">Descripcion</label>
+            <textarea name="descripcion"></textarea>
+        </p>
+
+        <input type="radio" name="genero" value="hombre">Hombre<br>
+        <input type="radio" name="genero" value="mujer">Mujer<br>
+        <input type="radio" name="genero" value="nada">Nada<br>
+
+        <select name="genero2" id="">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="nada">Nada</option>
+        </select>
+
+        <input type="submit" value="Enviar Formulario">
+
+    </form>
+    <h3>Listado de frutas</h3>
+    <ul>
+        <li>Manzana</li>
+        <ul>
+            <li>Roja</li>
+            <li>Verde</li>
+        </ul>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+
+    <h3>Tablas</h3>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Pais</th>
+        </tr>
+        <tr>
+            <td>Francisco</td>
+            <td>Duran</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Kevin</td>
+            <td colspan="7">Lopez</td>
+
+        </tr>
+    </table>
+</body>
+
+</html>
