@@ -1,6 +1,7 @@
 "use strict";
 
 var Project = require("../models/project");
+var fs = require('fs');
 
 var controller = {
   home: function (req, res) {
@@ -117,8 +118,11 @@ var controller = {
       var filePath = req.files.image.path;
       var fileSplit = filePath.split("/");
       var fileName = fileSplit[1];
+      var extSplit = fileName.split(".");
+      var fileExt = extSplit[1];
 
-      Project.findByIdAndUpdate(
+      if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'git'){
+          Project.findByIdAndUpdate(
         projectId,
         { image: fileName },
         { new: true },
@@ -134,10 +138,15 @@ var controller = {
                 message: "El proyecto no existe y no se ha asignado la imagen",
               });
           return res.status(200).send({
-            project: projectUpdated,
+            project: projectUpdated
           });
         }
       );
+      }else{
+          fs.unlink(filePath, (err) => {
+              return res.status(200).send({message: 'La extension no es valida'});
+          });
+      }
     } else {
       return res.status(200).send({
         mesage: fileName,
