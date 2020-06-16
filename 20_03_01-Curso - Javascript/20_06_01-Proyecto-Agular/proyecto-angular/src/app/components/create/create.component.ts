@@ -11,8 +11,10 @@ import { Global } from '../../services/global';
   providers: [ProjectService, UploadService]
 })
 export class CreateComponent implements OnInit {
+
   public title: string;
   public project: Project;
+  public save_project;
   public status: string;
   public filesToUpload: Array<File>;
 
@@ -34,8 +36,8 @@ export class CreateComponent implements OnInit {
         if(response.project){
           // Subir la imagen
           this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any)=>{
+            this.save_project = result;
             this.status = 'success';
-            console.log(result);
             form.reset();
           });
         }else{
