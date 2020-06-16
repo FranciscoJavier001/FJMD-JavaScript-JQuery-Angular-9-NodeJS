@@ -45,7 +45,7 @@ var controller = {
     getProject: function(req, res) {
         var projectId = req.params.id;
         if (projectId == null)
-            return res.status(404).send({ message: "El proyecto no eiste." });
+            return res.status(404).send({ message: "El proyecto no existe." });
         Project.findById(projectId, (err, project) => {
             if (err)
                 return res.status(500).send({ message: "Error al devolver los datos" });
@@ -118,7 +118,7 @@ var controller = {
             var filePath = req.files.image.path;
             var fileSplit = filePath.split("/");
             var fileName = fileSplit[1];
-            var extSplit = fileName.split(".");
+            var extSplit = fileName.split("\.");
             var fileExt = extSplit[1];
 
             if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'git') {
