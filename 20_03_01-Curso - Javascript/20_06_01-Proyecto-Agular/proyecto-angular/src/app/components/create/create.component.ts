@@ -36,7 +36,7 @@ export class CreateComponent implements OnInit {
         if(response.project){
           // Subir la imagen
           this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any)=>{
-            this.save_project = result;
+            this.save_project = result.project;
             this.status = 'success';
             form.reset();
           });
