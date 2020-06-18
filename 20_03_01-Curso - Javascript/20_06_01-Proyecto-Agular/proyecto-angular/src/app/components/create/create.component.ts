@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
     this.project = new Project('', '', '', '', 2020, '', '');
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   onSubmit(form){

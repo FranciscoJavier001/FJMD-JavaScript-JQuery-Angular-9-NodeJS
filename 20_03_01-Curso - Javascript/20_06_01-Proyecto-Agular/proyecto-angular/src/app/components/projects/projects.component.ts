@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
     this.url = Global.url;
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getProjects();
   }
 

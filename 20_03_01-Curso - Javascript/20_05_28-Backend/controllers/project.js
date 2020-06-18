@@ -12,7 +12,7 @@ var controller = {
     },
     test: function(req, res) {
         return res.status(200).send({
-            mesage: "Soy el metodo o accion test del controlador de project",
+            mesage: "Soy el metodo o accion test del controlador de project"
         });
     },
 
@@ -53,7 +53,7 @@ var controller = {
                 return res.status(404).send({ message: "El proyecto no eiste." });
 
             return res.status(200).send({
-                project,
+                project
             });
         });
     },
@@ -88,10 +88,9 @@ var controller = {
                         .status(404)
                         .send({ message: "No existe el proyecto para actalizar" });
                 return res.status(200).send({
-                    project: projectUpdated,
+                    project: projectUpdated
                 });
-            }
-        );
+            });
     },
 
     deleteProject: function(req, res) {
@@ -147,7 +146,7 @@ var controller = {
             }
         } else {
             return res.status(200).send({
-                mesage: fileName,
+                mesage: fileName
             });
         }
     },
