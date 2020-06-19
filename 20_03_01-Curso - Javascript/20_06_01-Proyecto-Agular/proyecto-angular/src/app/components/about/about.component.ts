@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
     this.web= "user.streaming.001@gmail.com"
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

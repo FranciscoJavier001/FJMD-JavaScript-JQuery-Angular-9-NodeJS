@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
     private _projectService: ProjectService,
     private _router: Router,
     private _route: ActivatedRoute
-  ) {
+  ){
     this.url = Global.url;
     this.confirm = false;
   }
@@ -34,7 +34,7 @@ export class DetailComponent implements OnInit {
 
   getProject(id){
     this._projectService.getProject(id).subscribe(
-      response =>{
+      response => {
         this.project = response.project;
       },
       error => {

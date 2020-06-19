@@ -32,12 +32,11 @@ export class CreateComponent implements OnInit {
   onSubmit(form){
     // Guardar datos basicos
     this._projectService.saveProject(this.project).subscribe(
-      response =>{
+      response => {
         if(response.project){
           // Subir la imagen
           if(this.filesToUpload){
-          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
-          .then((result:any)=>{
+          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
             this.save_project = result.project;
             this.status = 'success';
             form.reset();
@@ -51,7 +50,7 @@ export class CreateComponent implements OnInit {
           this.status = 'failed';
         }
       },
-      error =>{
+      error => {
         console.log(<any>error);
       }
     );

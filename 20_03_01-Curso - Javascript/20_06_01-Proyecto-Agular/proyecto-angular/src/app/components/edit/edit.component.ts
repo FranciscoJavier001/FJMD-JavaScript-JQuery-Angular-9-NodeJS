@@ -26,7 +26,7 @@ export class EditComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router
   ) {
-    this.title="Editar Proyecto";
+    this.title = "Editar Proyecto";
     this.url = Global.url;
   }
 
@@ -40,7 +40,7 @@ export class EditComponent implements OnInit {
   
     getProject(id){
       this._projectService.getProject(id).subscribe(
-        response =>{
+        response => {
           this.project = response.project;
         },
         error => {
@@ -51,11 +51,12 @@ export class EditComponent implements OnInit {
 
     onSubmit(){
       this._projectService.updateProject(this.project).subscribe(
-        response =>{
+        response => {
           if(response.project){
             // Subir la imagen
             if(this.filesToUpload){
-              this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any)=>{
+              this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
+              .then((result:any) => {
                 this.save_project = result.project;
                 this.status = 'success';
               });
