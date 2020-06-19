@@ -51,7 +51,7 @@ export class DetailComponent implements OnInit {
     this._projectService.deleteProject(id).subscribe(
       response => {
         if(response.project){
-          this._router.navigate(['/projectos']);
+          this._router.navigate(['/proyectos']);
         }
       },
       error => {

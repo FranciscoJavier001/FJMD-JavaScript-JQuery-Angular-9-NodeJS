@@ -23,7 +23,7 @@ export class EditComponent implements OnInit {
   constructor(
     private _projectService: ProjectService,
     private _uploadService: UploadService,
-    private _routes: ActivatedRoute,
+    private _route: ActivatedRoute,
     private _router: Router
   ) {
     this.title="Editar Proyecto";
@@ -31,7 +31,7 @@ export class EditComponent implements OnInit {
   }
 
     ngOnInit() {
-      this._routes.params.subscribe(params => {
+      this._route.params.subscribe(params => {
         let id = params.id;
   
         this.getProject(id);
