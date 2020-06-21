@@ -12,12 +12,11 @@ import { EditComponent } from './components/edit/edit.component';
 const appRoutes: Routes = [
     {path: '', component: AboutComponent},
     {path: 'sobre-mi', component: AboutComponent},
-    {path: 'sobre-mi', component: AboutComponent},
     {path: 'proyectos', component: ProjectsComponent},
     {path: 'crear-proyecto', component: CreateComponent},
     {path: 'contacto', component: ContactComponent},
     {path: 'proyecto/:id', component: DetailComponent},
-    {path: 'editar-proyecto/:id', component: EditComponent },
+    {path: 'editar-proyecto/:id', component: EditComponent},
     {path: '**', component: ErrorComponent}
 ];
 
