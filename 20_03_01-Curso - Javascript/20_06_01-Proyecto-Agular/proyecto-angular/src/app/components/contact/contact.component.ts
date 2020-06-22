@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 declare var $:any;
 
 @Component({
@@ -11,13 +11,15 @@ export class ContactComponent implements OnInit {
   public anchuraToSlider: any;
   public captions: boolean;
   public autor: any;
+  @ViewChild('textos') textos;
 
   constructor() {
     this.captions = true;
   }
 
   ngOnInit() {
-
+    var opcion_clasica = (document.querySelector("#texto").innerHTML);
+    // alert(this.textos.nativeElement.textContent);
   }
 
   cargarSlider(){
