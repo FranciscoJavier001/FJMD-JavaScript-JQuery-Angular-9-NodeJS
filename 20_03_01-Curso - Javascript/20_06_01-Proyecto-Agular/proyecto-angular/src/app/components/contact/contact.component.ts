@@ -18,15 +18,15 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    var opcion_clasica = (document.querySelector("#texto").innerHTML);
-    // alert(this.textos.nativeElement.textContent);
+    var opcion_clasica = document.querySelector('#texto').innerHTML;
+    //alert(this.textos.nativeElement.textContent);
   }
 
   cargarSlider(){
     this.anchuraToSlider = this.widthSlider;
   }
 
-  resetarSlider(){
+  resetearSlider(){
     this.anchuraToSlider = false;
   }
 

@@ -37,7 +37,7 @@ import { ResaltadoDirective } from './resaltado.directive';
     FormsModule
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
   ],
   bootstrap: [AppComponent]
 })

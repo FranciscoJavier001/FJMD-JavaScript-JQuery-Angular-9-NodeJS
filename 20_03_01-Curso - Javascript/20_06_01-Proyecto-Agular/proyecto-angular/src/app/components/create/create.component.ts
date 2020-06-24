@@ -22,7 +22,7 @@ export class CreateComponent implements OnInit {
     private _projectService: ProjectService,
     private _uploadService: UploadService
   ) {
-    this.title="Crear Proyecto";
+    this.title ="Crear Proyecto";
     this.project = new Project('', '', '', '', 2020, '', '');
   }
 
@@ -30,13 +30,16 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(form){
-    // Guardar datos basicos
+
+    // Guardar datos básicos
     this._projectService.saveProject(this.project).subscribe(
       response => {
         if(response.project){
+
           // Subir la imagen
           if(this.filesToUpload){
-          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image').then((result:any) => {
+          this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
+          .then((result:any) => {
             this.save_project = result.project;
             this.status = 'success';
             form.reset();
