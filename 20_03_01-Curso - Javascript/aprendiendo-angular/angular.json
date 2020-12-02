@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Aprendiendo-Angular": {
+    "aprendiendo-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Aprendiendo-Angular",
+            "outputPath": "dist/aprendiendo-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -40,7 +43,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -48,13 +50,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -63,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Aprendiendo-Angular:build"
+            "browserTarget": "aprendiendo-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Aprendiendo-Angular:build:production"
+              "browserTarget": "aprendiendo-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Aprendiendo-Angular:build"
+            "browserTarget": "aprendiendo-angular:build"
           }
         },
         "test": {
@@ -111,19 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Aprendiendo-Angular:serve"
+            "devServerTarget": "aprendiendo-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Aprendiendo-Angular:serve:production"
+              "devServerTarget": "aprendiendo-angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Aprendiendo-Angular",
+  "defaultProject": "aprendiendo-angular",
   "cli": {
-    "analytics": "3d6a09cd-ec35-44d5-a62a-5e57be36163f"
+    "analytics": "8796eaf2-24b7-4ec4-86e5-67b260d55202"
   }
 }
