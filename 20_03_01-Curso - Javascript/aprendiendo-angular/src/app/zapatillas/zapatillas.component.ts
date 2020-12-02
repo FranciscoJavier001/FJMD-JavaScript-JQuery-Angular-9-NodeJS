@@ -15,7 +15,8 @@ export class ZapatillasComponent implements OnInit{ //** Esto es un hook, el OnI
     public color: string;
     public mi_marca: string;
 
-    constructor(
+    //** Le damos un valor a este array */
+    constructor( 
         private _zapatillaService: ZapatillaService
     ){
         this.mi_marca = 'Fila';
@@ -23,9 +24,9 @@ export class ZapatillasComponent implements OnInit{ //** Esto es un hook, el OnI
         this.marcas = new Array();
     }
 
-    ngOnInit(){
+    ngOnInit(){ //** Para cumplir el contrato de la interfaz cuando se lanze */
         this.zapatillas = this._zapatillaService.getZapatillas();
-        alert(this._zapatillaService.getTexto());
+        // alert(this._zapatillaService.getTexto()); //** Para que no este molestando el alert */
         this.getMarcas();
     }
 

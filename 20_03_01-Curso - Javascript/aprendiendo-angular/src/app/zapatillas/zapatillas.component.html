@@ -16,22 +16,23 @@
     </li>
 </ul>
 
+<!-- Estas son las directivas estructurales y las directias de control -->
 <p>Las deportivas que tenemos disponibles son:</p>
 <ul>
-    <li *ngFor="let deportiva of zapatillas">
+    <li *ngFor="let deportiva of zapatillas"> <!-- El ngFor me permite barrer el arreglo para ver cuales zapatillas tenemos -->
 
         <span [ngStyle]="{
         'text-decoration': !deportiva.stock ? 'line-through' : 'none'
       }">
-      {{ deportiva.nombre }} - 
+      {{ deportiva.nombre }} -  <!-- Asi accedemos al nombre de la zapatilla -->
       <strong 
-      [class.altoPrecio]="deportiva.precio >= 80"
+      [class.altoPrecio]="deportiva.precio >= 80" 
       [ngClass]="{
         'fondoRojo': deportiva.precio > 100, 
         'subrayado': deportiva.marca == 'Nike'
       }"
       >
-        {{ deportiva.precio }}$
+        {{ deportiva.precio }}$ <!-- Asi accedemos al precio de la zapatilla -->
       </strong>
       </span>
 
@@ -58,4 +59,4 @@
     </li>
 </ul>
 
-<i class="fas fa-font-awesome-logo-full    "></i>
+<i class="fas fa-font-awesome-logo-full"></i>

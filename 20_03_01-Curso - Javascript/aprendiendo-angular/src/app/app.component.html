@@ -1,3 +1,4 @@
+<!-- Estas son directivas, para meterle estlo a la pagina, esto se ve reflejado en todo, [ngStyle]=es una directiva de atributo que me deja ponerle estilo a un HTMLy se pone entre llaves para que sea un JSON  -->
 <div [ngStyle]="{
                 'background': config.fondo,
                 'padding': '20px',
@@ -5,7 +6,7 @@
                 'border-color': config.color
                 }">
     <h1>
-        Bienvenido al {{ title }}! <!-- Este es el titulo que lo declaramos en el app.component.ts, exportamos la clase de app.component.ts -->
+        Bienvenido al {{ title }}! <!-- Este es el titulo que lo declaramos en app.component.ts, pero lo importamos desde configuracion.ts, ahi tenemos el titulo y el parrafo -->
     </h1>
     <p>{{descripcion}}</p>
 
