@@ -26,7 +26,7 @@ export class ZapatillasComponent implements OnInit{ //** Esto es un hook, el OnI
 
     ngOnInit(){ //** Para cumplir el contrato de la interfaz cuando se lanze */
         this.zapatillas = this._zapatillaService.getZapatillas();
-        // alert(this._zapatillaService.getTexto()); //** Para que no este molestando el alert */
+        alert(this._zapatillaService.getTexto()); //** Para que no este molestando el alert */
         this.getMarcas();
     }
 
