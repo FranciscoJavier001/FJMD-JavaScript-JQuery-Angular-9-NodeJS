@@ -36,6 +36,7 @@
       </strong>
       </span>
 
+        <!-- Creamos una directiva ue se muestre cuando el precio sea menor a 80, aqui le dimos el estilo con el ngIf=(que no es mas que un If), las etiquetas de estilo la ponemos entre corchetes, recuerda "?" es para decir que es un ternario y le metemos el background verde ":" es para decirle si no, en este caso, sino que tenga el fondo transparente, que sea transparente, y lo otro es para decirle que lo ponga en color blanco y si no en color negro las letras -->
         <span *ngIf="deportiva.precio < 80" [style.background]="deportiva.precio < 80 ? 'green' : 'transparent'" [style.color]="deportiva.precio < 80 ? 'white' : 'black'">
       ¡EN OFERTA!</span
     >
